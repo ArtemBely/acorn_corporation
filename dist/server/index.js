@@ -10,44 +10,24 @@ import bodyParser from 'body-parser';
 import serialize from 'serialize-javascript';
 import validator from 'express-validator';
 import session from 'express-session';
-import mongoose from 'mongoose';
 import passport from 'passport';
 import flash from 'connect-flash';
-import regRouter from './routers/registration';
-import accountSw from './routers/accountSw';
-import taxesRouter from './routers/taxes';
-import amlRouter from './routers/aml';
-import companiesSw from './routers/companiesSw';
-import businessSw from './routers/businessSw';
-import about from './routers/about';
-import errorSw from './routers/error';
-import investmentStart from './routers/investmentStart';
-import development from './routers/development';
-import blog from './routers/blog';
-import emTech from './routers/emTech';
-import chRouter from './routers/check';
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
 //const port = process.env.PORT || 5000;
 require('dotenv/config');
-mongoose.connect(CONNECTION_URI || process.env.CONNECT, {
+/*
+mongoose.connect(
+  CONNECTION_URI || process.env.CONNECT,
+  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
-}, () => {
+  },
+  () => {
     console.log('Connection with database Users completed');
-});
-/*
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken);
-
-
-client.messages.create({
-  to: '+420775650705',
-  from: '+447588664528',
-  body: 'Забей калик ежжи!'
-}).then((message) => console.log(message.sid));
+  }
+);
 */
 app.use(function (req, res, next) {
     res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
@@ -72,19 +52,6 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use('/registration', regRouter);
-app.use('/check', chRouter);
-app.use('/account_in_sw', accountSw);
-app.use('/taxes', taxesRouter);
-app.use('/aml_control', amlRouter);
-app.use('/swiss_companies_setup', companiesSw);
-app.use('/business_in_switzerland', businessSw);
-app.use('/about', about);
-app.use('/error', errorSw);
-app.use('/investment_club_start', investmentStart);
-app.use('/business_development', development);
-app.use('/blog', blog);
-app.use('/emtech_in_davos', emTech);
 app.get('*', (req, res, next) => {
     const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
     const promise = activeRouter.fetchInitialData ?
