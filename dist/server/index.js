@@ -1,21 +1,23 @@
-import React from 'react';
-import { StaticRouter, matchPath } from 'react-router-dom';
-import { App } from '../components/App';
+import React from "react";
+import { StaticRouter, matchPath } from "react-router-dom";
 //@ts-ignore
-import Routes from '../components/routes';
-import express from 'express';
-import { renderToString } from 'react-dom/server';
-import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
-import serialize from 'serialize-javascript';
-import validator from 'express-validator';
-import session from 'express-session';
-import passport from 'passport';
-import flash from 'connect-flash';
+import express from "express";
+import { renderToString } from "react-dom/server";
+import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
+import serialize from "serialize-javascript";
+import validator from "express-validator";
+import session from "express-session";
+import passport from "passport";
+import flash from "connect-flash";
+import { App } from "../components/App";
+import Routes from "../components/routes";
+import portfolio from "./routers/portfolio";
+import about from "./routers/about";
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
 //const port = process.env.PORT || 5000;
-require('dotenv/config');
+require("dotenv/config");
 /*
 mongoose.connect(
   CONNECTION_URI || process.env.CONNECT,
@@ -34,30 +36,34 @@ app.use(function (req, res, next) {
     res.setHeader("Pragma", "no-cache"); // HTTP 1.0.
     res.setHeader("Expires", "0");
     //res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    res.setHeader("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
 });
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
 app.use(session({
-    secret: 'mysecret',
+    secret: "mysecret",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
 }));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.get('*', (req, res, next) => {
+// pages
+app.use("/portfolio", portfolio);
+app.use("/about", about);
+app.get("*", (req, res, next) => {
     const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
-    const promise = activeRouter.fetchInitialData ?
-        activeRouter.fetchInitialData(req.path) :
-        Promise.resolve();
-    promise.then((data) => {
+    const promise = activeRouter.fetchInitialData
+        ? activeRouter.fetchInitialData(req.path)
+        : Promise.resolve();
+    promise
+        .then((data) => {
         const context = { data };
         const user = { name: "Artem" };
         const markup = renderToString(React.createElement(StaticRouter, { location: req.url, context: context },
@@ -79,7 +85,8 @@ app.get('*', (req, res, next) => {
                 </body>
             </html>`;
         return res.send(html);
-    }).catch(next);
+    })
+        .catch(next);
 });
 /*
 app.use((error:any, req: Request, res: Response, next: NextFunction) => {
@@ -92,8 +99,11 @@ app.use((error:any, req: Request, res: Response, next: NextFunction) => {
 });
 */
 app.use((req, res, next) => {
-    var err = new Error('Noooo');
+    //<-- заменить если появится непредвиденная ошибка
+    var err = new Error("Noooo");
     err.status = 404;
     next(err);
 });
-app.listen(8888, () => { console.log('Server started!'); });
+app.listen(8888, () => {
+    console.log("Server started!");
+});

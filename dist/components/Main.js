@@ -1,6 +1,6 @@
-import React from 'react';
-//@ts-ignore
-function Main() {
-    return (React.createElement("div", null, "Main Component"));
-}
+import React from "react";
+import "../../public/styles/main.css";
+const Main = () => {
+    return React.createElement("div", { className: "main" });
+};
 export default Main;

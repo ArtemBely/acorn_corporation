@@ -1,11 +1,23 @@
-import Main from './Main';
+import About from "../pages/about/About";
+import Portfolio from "../pages/portfolio/Portfolio";
+import Main from "./Main";
 
-const routes:Array<Object> = [
+const routes: Array<Object> = [
   {
-    path: '/',
+    path: "/",
     exact: true,
-    component: Main
-  }
-]
+    component: Main,
+  },
+  {
+    path: "/portfolio",
+    exact: true,
+    component: Portfolio,
+  },
+  {
+    path: "/about",
+    exact: true,
+    component: About,
+  },
+];
 
 export default routes;

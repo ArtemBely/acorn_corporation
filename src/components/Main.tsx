@@ -1,13 +1,9 @@
-import React from 'react';
-//@ts-ignore
+import React, { FC } from "react";
 
+import "../../public/styles/main.css";
 
-function Main(){
-    return(
-      <div>
-          Main Component
-      </div>
-    )
-}
+const Main: FC = () => {
+  return <div className="main"></div>;
+};
 
 export default Main;

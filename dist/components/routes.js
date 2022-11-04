@@ -1,9 +1,21 @@
-import Main from './Main';
+import About from "../pages/about/About";
+import Portfolio from "../pages/portfolio/Portfolio";
+import Main from "./Main";
 const routes = [
     {
-        path: '/',
+        path: "/",
         exact: true,
-        component: Main
-    }
+        component: Main,
+    },
+    {
+        path: "/portfolio",
+        exact: true,
+        component: Portfolio,
+    },
+    {
+        path: "/about",
+        exact: true,
+        component: About,
+    },
 ];
 export default routes;
