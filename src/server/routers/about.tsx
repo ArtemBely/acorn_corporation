@@ -1,5 +1,5 @@
 import React from "react";
-import express from "express";
+import express, { Request, Response } from 'express';
 import serialize from "serialize-javascript";
 import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
@@ -8,10 +8,12 @@ import About from "../../pages/about/About";
 
 const router = express.Router();
 
-router.get("/about", (req, res) => {
+router.get("/about", (req:Request, res:Response) => {
   let cond = true;
   const congrats = renderToString(
-    React.createElement(StaticRouter, null, React.createElement(About, null))
+    <StaticRouter>
+        <About />
+    </StaticRouter>
   );
 
   res.send(`<!DOCTYPE html>
@@ -21,9 +23,7 @@ router.get("/about", (req, res) => {
                    <link rel="stylesheet" type="text/css" href="./styles/about.css">
                      <meta name="viewport" content="width=device-width, initial-scale=1">
                        <script src='bundle.js' defer></script>
-                       <script>window.__INITIAL_STATE__ = ${serialize(
-                         cond
-                       )}</script>
+                       <script>window.__INITIAL_STATE__ = ${serialize(cond)}</script>
                        </head>
                      <body>
                    <div id="app">
