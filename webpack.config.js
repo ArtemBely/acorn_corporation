@@ -2,9 +2,15 @@ const path = require("path");
 const webpack = require("webpack");
 var nodeExternals = require("webpack-node-externals");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodemonPlugin = require('nodemon-webpack-plugin');
 
 var browserConfig = {
   entry: ["babel-regenerator-runtime", "./dist/browser/index.js"],
+  //watch: true,
+  watchOptions: {
+      aggregateTimeout: 3000,
+      poll: 5000,
+  },
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundles/bundle.js",
@@ -62,11 +68,17 @@ var browserConfig = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    //new NodemonPlugin(),
   ],
 };
 
 var serverConfig = {
   entry: ["babel-regenerator-runtime", "./dist/server/index.js"],
+  //watch: true,
+  watchOptions: {
+      aggregateTimeout: 3000,
+      poll: 5000,
+  },
   target: "node",
   externals: [nodeExternals()],
   output: {
@@ -126,6 +138,7 @@ var serverConfig = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    //new NodemonPlugin(),
   ],
 };
 

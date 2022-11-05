@@ -1,5 +1,5 @@
 import React from "react";
-import express from "express";
+import express from 'express';
 import serialize from "serialize-javascript";
 import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
@@ -7,7 +7,8 @@ import Portfolio from "../../pages/portfolio/Portfolio";
 const router = express.Router();
 router.get("/portfolio", (req, res) => {
     let cond = true;
-    const congrats = renderToString(React.createElement(StaticRouter, null, React.createElement(Portfolio, null)));
+    const congrats = renderToString(React.createElement(StaticRouter, null,
+        React.createElement(Portfolio, null)));
     res.send(`<!DOCTYPE html>
         <html>
             <head>
