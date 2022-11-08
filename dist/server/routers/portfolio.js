@@ -1,9 +1,9 @@
 import React from "react";
-import express from 'express';
+import express from "express";
 import serialize from "serialize-javascript";
 import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
-import Portfolio from "../../pages/portfolio/Portfolio";
+import Portfolio from "../../components/pages/portfolio/Portfolio";
 const router = express.Router();
 router.get("/portfolio", (req, res) => {
     let cond = true;

@@ -20,16 +20,19 @@ a {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
 }
 
 .main {
   background-image: url("../images/main_image.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
 }
 
 .menu {
   padding: 40px 30px;
+  width: 470px;
 }
 
 .menu__header {
@@ -63,6 +66,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  width: 420px;
 }
 .menu__links-link {
   width: 205px;

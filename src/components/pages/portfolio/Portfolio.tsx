@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 
-import Close from "../../components/ui/close/Close";
-import Heading from "../../components/ui/heading/Heading";
+import Heading from "../../ui/heading/Heading";
+import Close from "../../ui/close/Close";
 
 import { portfolio } from "./data";
 
-import "../../../public/styles/portfolio.css";
+import "../../../../public/styles/portfolio.css";
 
 const Portfolio: FC = () => {
   return (

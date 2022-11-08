@@ -1,5 +1,5 @@
-import About from "../pages/about/About";
-import Portfolio from "../pages/portfolio/Portfolio";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio";
 import Main from "./Main";
 
 const routes: Array<Object> = [

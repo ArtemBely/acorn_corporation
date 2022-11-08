@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
-import Close from "../../components/ui/close/Close";
-import Heading from "../../components/ui/heading/Heading";
+import Heading from "../../ui/heading/Heading";
+import Close from "../../ui/close/Close";
 
 import { employees } from "./data";
 
-import "../../../public/styles/about.css";
+import "../../../../public/styles/about.css";
 
 const About: FC = () => {
   return (

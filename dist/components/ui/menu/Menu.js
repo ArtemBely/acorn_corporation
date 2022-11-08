@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { links } from "./data";
-import "../../../../public/styles/main.css";
 const Menu = () => {
     let location = useLocation();
     return (React.createElement("div", { className: "menu" },

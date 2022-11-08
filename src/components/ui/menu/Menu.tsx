@@ -4,8 +4,6 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import { links } from "./data";
 
-import "../../../../public/styles/main.css";
-
 const Menu: FC = () => {
   let location = useLocation();
 
