@@ -1,12 +1,21 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { links } from "./data";
 
 const Menu: FC = () => {
-  let location = useLocation();
+  // текущий язык сайта + манипуляции с ним
+  const [lang, setLang] = useState(localStorage.getItem("i18nextLng"));
 
+  let location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    setLang(lang === "Ru" ? "En" : "Ru");
+    i18n.changeLanguage(lang === "Ru" ? "En" : "Ru");
+  };
   return (
     <div className="menu">
       <div className="menu__header">
@@ -16,11 +25,15 @@ const Menu: FC = () => {
         <img src="./images/profile.svg" alt="profile" />
       </div>
       <div className="menu__text">
-        <p className="menu__text-caption">Branding & website development</p>
-        <p className="menu__text-title">via MarTech Perspective</p>
+        <p className="menu__text-caption">
+          {" "}
+          {t("Branding & website development")}
+        </p>
+        <p className="menu__text-title">{t("via MarTech Perspective")}</p>
         <p className="menu__text-subtitle">
-          We develop visual communications using marketing technology for
-          FinTech and Event companies
+          {t(
+            "We develop visual communications using marketing technology for FinTech and Event companies"
+          )}
         </p>
       </div>
       {/* array with all links/cards */}
@@ -34,7 +47,7 @@ const Menu: FC = () => {
                 filter: location.pathname !== "/" ? "grayscale(100%)" : "none", // если не home page, то цвет карточек ч/б
               }}
             >
-              <p>{link.name}</p>
+              <p>{t(link.name)}</p>
             </div>
           </NavLink>
         ))}
@@ -44,7 +57,9 @@ const Menu: FC = () => {
           <p className="menu__policy-year">© 2022</p>
           <p className="menu__policy-privacy">Privacy Policy</p>
         </div>
-        <p className="menu__policy-lang">En</p>
+        <p className="menu__policy-lang" onClick={changeLanguage}>
+          {lang}
+        </p>
       </div>
     </div>
   );
