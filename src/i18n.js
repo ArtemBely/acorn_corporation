@@ -13,7 +13,7 @@ i18n
     fallbackLng: "En",
     debug: true,
     detection: {
-      order: ["localStorage"],
+      // order: ["localStorage"],
     },
     interpolation: {
       escapeValue: false,

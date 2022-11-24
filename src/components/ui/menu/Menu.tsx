@@ -7,7 +7,9 @@ import { links } from "./data";
 
 const Menu: FC = () => {
   // текущий язык сайта + манипуляции с ним
-  const [lang, setLang] = useState(localStorage.getItem("i18nextLng"));
+  const [lang, setLang] = useState(
+    typeof window != "undefined" ? localStorage.getItem("i18nextLng") : "En"
+  );
 
   let location = useLocation();
   const { t, i18n } = useTranslation();
@@ -22,7 +24,9 @@ const Menu: FC = () => {
         <NavLink to="/">
           <img src="./images/logo.svg" alt="logo" />
         </NavLink>
-        <img src="./images/profile.svg" alt="profile" />
+        <NavLink to="/login">
+          <img src="./images/profile.svg" alt="profile" />
+        </NavLink>
       </div>
       <div className="menu__text">
         <p className="menu__text-caption">
@@ -39,15 +43,23 @@ const Menu: FC = () => {
       {/* array with all links/cards */}
       <div className="menu__links">
         {links.map((link) => (
-          <NavLink to={link.to} key={link.id}>
+          <NavLink to={link.block ? "#" : link.to} key={link.id}>
             <div
               className="menu__links-link"
               style={{
                 background: `url(${link.image})`,
                 filter: location.pathname !== "/" ? "grayscale(100%)" : "none", // если не home page, то цвет карточек ч/б
+                opacity: link.block ? 0.5 : 1,
               }}
             >
-              <p>{t(link.name)}</p>
+              <div className="menu__links-link-block">
+                <p>{t(link.name)}</p>
+                {link.block && (
+                  <p className="menu__links-link-block-soon">
+                    Will be available soon
+                  </p>
+                )}
+              </div>
             </div>
           </NavLink>
         ))}
@@ -55,7 +67,9 @@ const Menu: FC = () => {
       <div className="menu__policy">
         <div className="menu__policy_left">
           <p className="menu__policy-year">© 2022</p>
-          <p className="menu__policy-privacy">Privacy Policy</p>
+          <NavLink to="/privacy">
+            <p className="menu__policy-privacy">Privacy Policy</p>
+          </NavLink>
         </div>
         <p className="menu__policy-lang" onClick={changeLanguage}>
           {lang}

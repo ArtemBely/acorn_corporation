@@ -16,6 +16,7 @@ export const links = [
     name: "Services",
     to: "/services",
     image: "./images/main/services.jpg",
+    block: true,
   },
   {
     id: 4,
