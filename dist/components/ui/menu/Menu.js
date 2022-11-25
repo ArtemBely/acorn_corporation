@@ -5,9 +5,7 @@ import { useTranslation } from "react-i18next";
 import { links } from "./data";
 const Menu = () => {
     // текущий язык сайта + манипуляции с ним
-    const [lang, setLang] = useState(typeof window != "undefined" ?
-        localStorage.getItem("i18nextLng") :
-        null);
+    const [lang, setLang] = useState(typeof window != "undefined" ? localStorage.getItem("i18nextLng") : "En");
     let location = useLocation();
     const { t, i18n } = useTranslation();
     const changeLanguage = () => {
@@ -18,23 +16,28 @@ const Menu = () => {
         React.createElement("div", { className: "menu__header" },
             React.createElement(NavLink, { to: "/" },
                 React.createElement("img", { src: "./images/logo.svg", alt: "logo" })),
-            React.createElement("img", { src: "./images/profile.svg", alt: "profile" })),
+            React.createElement(NavLink, { to: "/login" },
+                React.createElement("img", { src: "./images/profile.svg", alt: "profile" }))),
         React.createElement("div", { className: "menu__text" },
             React.createElement("p", { className: "menu__text-caption" },
                 " ",
                 t("Branding & website development")),
             React.createElement("p", { className: "menu__text-title" }, t("via MarTech Perspective")),
             React.createElement("p", { className: "menu__text-subtitle" }, t("We develop visual communications using marketing technology for FinTech and Event companies"))),
-        React.createElement("div", { className: "menu__links" }, links.map((link) => (React.createElement(NavLink, { to: link.to, key: link.id },
+        React.createElement("div", { className: "menu__links" }, links.map((link) => (React.createElement(NavLink, { to: link.block ? "#" : link.to, key: link.id },
             React.createElement("div", { className: "menu__links-link", style: {
                     background: `url(${link.image})`,
-                    filter: location.pathname !== "/" ? "grayscale(100%)" : "none", // если не home page, то цвет карточек ч/б
+                    filter: location.pathname !== "/" ? "grayscale(100%)" : "none",
+                    opacity: link.block ? 0.5 : 1,
                 } },
-                React.createElement("p", null, t(link.name))))))),
+                React.createElement("div", { className: "menu__links-link-block" },
+                    React.createElement("p", null, t(link.name)),
+                    link.block && (React.createElement("p", { className: "menu__links-link-block-soon" }, "Will be available soon")))))))),
         React.createElement("div", { className: "menu__policy" },
             React.createElement("div", { className: "menu__policy_left" },
                 React.createElement("p", { className: "menu__policy-year" }, "\u00A9 2022"),
-                React.createElement("p", { className: "menu__policy-privacy" }, "Privacy Policy")),
+                React.createElement(NavLink, { to: "/privacy" },
+                    React.createElement("p", { className: "menu__policy-privacy" }, "Privacy Policy"))),
             React.createElement("p", { className: "menu__policy-lang", onClick: changeLanguage }, lang))));
 };
 export default Menu;

@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.about__expertise-text {
+  width: 583px;
+}
+
 .about__expertise-top {
   display: flex;
 }
@@ -35,8 +39,13 @@
   margin-bottom: 80px;
 }
 
+.about__solution-text {
+  width: 583px;
+}
+
 .about__weAreThe {
   margin-bottom: 80px;
+  width: 583px;
 }
 
 .about__team {
@@ -47,6 +56,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1365px;
 }
 
 .about__team_cards-card {
@@ -85,5 +95,9 @@
 }
 
 .about__partners {
+  margin-bottom: 80px;
+}
+
+.about__where {
   margin-bottom: 80px;
 }

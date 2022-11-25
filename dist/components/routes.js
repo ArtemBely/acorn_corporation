@@ -1,6 +1,9 @@
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Main from "./Main";
+import Privacy from "./pages/privacy/Privacy";
+import Login from "./pages/login/Login";
+import DiscussProject from "./pages/discussProject/DiscussProject";
 const routes = [
     {
         path: "/",
@@ -16,6 +19,21 @@ const routes = [
         path: "/about",
         exact: true,
         component: About,
+    },
+    {
+        path: "/privacy",
+        exact: true,
+        component: Privacy,
+    },
+    {
+        path: "/login",
+        exact: true,
+        component: Login,
+    },
+    {
+        path: "/discuss",
+        exact: true,
+        component: DiscussProject,
     },
 ];
 export default routes;
