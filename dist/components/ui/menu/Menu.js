@@ -5,7 +5,9 @@ import { useTranslation } from "react-i18next";
 import { links } from "./data";
 const Menu = () => {
     // текущий язык сайта + манипуляции с ним
-    const [lang, setLang] = useState(localStorage.getItem("i18nextLng"));
+    const [lang, setLang] = useState(typeof window != "undefined" ?
+        localStorage.getItem("i18nextLng") :
+        null);
     let location = useLocation();
     const { t, i18n } = useTranslation();
     const changeLanguage = () => {
