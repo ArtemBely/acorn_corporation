@@ -1,5 +1,6 @@
 .about {
   padding: 40px 28px;
+  /*  */
 }
 .about__header {
   display: flex;
@@ -429,27 +430,29 @@ input {
   padding: 0;
   margin: 0;
 }
+
 body {
-  font-family: 'Inter-Regular';
+  font-family: "Inter-Regular";
 }
 @font-face {
-	font-family: 'Inter-Regular';
-	src: url(/fonts/Inter-Regular.eot);
-	src: url(/fonts/Inter-Regular.eot?#iefix) format('embedded-opentype'),
-	url(/fonts/Inter-Regular.woff) format('woff'),
-	url(/fonts/Inter-Regular.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Inter-Regular";
+  src: url(/fonts/Inter-Regular.eot);
+  src: url(/fonts/Inter-Regular.eot?#iefix) format("embedded-opentype"),
+    url(/fonts/Inter-Regular.woff) format("woff"),
+    url(/fonts/Inter-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'Inter-Bold';
-	src: url(/fonts/Inter-Bold.eot);
-	src: url(/fonts/Inter-Bold.eot?#iefix) format('embedded-opentype'),
-	url(/fonts/Inter-Bold.woff) format('woff'),
-	url(/fonts/Inter-Bold.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Inter-Bold";
+  src: url(/fonts/Inter-Bold.eot);
+  src: url(/fonts/Inter-Bold.eot?#iefix) format("embedded-opentype"),
+    url(/fonts/Inter-Bold.woff) format("woff"),
+    url(/fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
 a {
   text-decoration: none;
   color: #fff;
@@ -878,4 +881,3 @@ a {
   background-color: var(--theme-color);
   box-shadow: var(--shadow);
 }
-
