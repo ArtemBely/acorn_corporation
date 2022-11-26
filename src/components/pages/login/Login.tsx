@@ -23,11 +23,13 @@ const Login: FC = () => {
             placeholder="Email"
             value={email}
             setValue={(e) => setEmail(e)}
+            type="email"
           />
           <InputAuth
-            placeholder="Password "
+            placeholder="Password"
             value={password}
             setValue={(e) => setPassword(e)}
+            type="password"
           />
           <button className="login__button-confirm">Confirm</button>
         </div>

@@ -9,6 +9,7 @@ const InputDuscuss: FC<IInputProps> = ({
   setValue,
   placeholder,
   disabled,
+  type,
 }) => {
   return (
     <input
@@ -17,6 +18,7 @@ const InputDuscuss: FC<IInputProps> = ({
       value={value}
       onChange={(e) => setValue(e.target.value)}
       disabled={disabled}
+      type={type}
     />
   );
 };

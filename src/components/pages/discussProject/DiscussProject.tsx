@@ -116,6 +116,7 @@ const DiscussProject: FC = () => {
                   placeholder="hello@example.com"
                   value={contact}
                   setValue={(e) => setContact(e)}
+                  type="email"
                 />
               </div>
               <div className="discuss__wrapper_input">

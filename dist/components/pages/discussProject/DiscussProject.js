@@ -69,7 +69,7 @@ const DiscussProject = () => {
                     React.createElement("div", { className: "discuss__wrapper_input" },
                         React.createElement("p", null, "\u0412\u0430\u0448 \u043A\u043E\u043D\u0442\u0430\u043A\u0442"),
                         React.createElement(InputDuscuss, { placeholder: "Email", value: "", setValue: () => { }, disabled: true }),
-                        React.createElement(InputDuscuss, { placeholder: "hello@example.com", value: contact, setValue: (e) => setContact(e) })),
+                        React.createElement(InputDuscuss, { placeholder: "hello@example.com", value: contact, setValue: (e) => setContact(e), type: "email" })),
                     React.createElement("div", { className: "discuss__wrapper_input" },
                         React.createElement("p", null, "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439"),
                         React.createElement(InputDuscuss, { placeholder: "I am in anticipation of our work!", value: comment, setValue: (e) => setComment(e) })),
