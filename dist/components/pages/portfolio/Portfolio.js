@@ -10,7 +10,7 @@ const Portfolio = () => {
             React.createElement(Heading, null, "Portfolio"),
             React.createElement(Close, null)),
         React.createElement("div", { className: "portfolio__items" }, portfolio.map((item) => (React.createElement(NavLink, { to: item.to, key: item.id },
-            React.createElement("div", { className: "portfolio__items-item", style: { background: `url(${item.image})` } },
+            React.createElement("div", { className: "portfolio__items-item", style: { background: `url(${item.image}) center` } },
                 React.createElement("p", null, item.name))))))));
 };
 export default Portfolio;

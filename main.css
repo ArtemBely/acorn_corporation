@@ -433,7 +433,7 @@
 }
 
 .websterz {
-  margin-top: 60px;
+  margin-top: 40px;
   width: 700px;
 }
 
@@ -450,6 +450,7 @@
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.6em;
+  margin-top: 30px;
 }
 
 .websterz__text {
@@ -480,7 +481,7 @@
   margin-block-end: 0px;
   padding-inline-start: 30px;
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .websterz__li {
   margin-left: 40px;
@@ -501,6 +502,10 @@
 
 .websterz__robot-img {
   height: 231px;
+}
+
+.websterz__robot2-img {
+  height: 347px;
 }
 
 .websterz__2variants-text {
@@ -537,6 +542,14 @@
 
 .websterz__itog2-img {
   height: 233px;
+}
+
+.websterz__acorn {
+  font-size: 17px;
+  border-top: 1px solid #cbcbcb;
+  padding: 15px 0px;
+  border-bottom: 1px solid #cbcbcb;
+  margin: 50px 0px;
 }
 
 html,

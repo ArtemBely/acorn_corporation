@@ -20,7 +20,7 @@ const Portfolio: FC = () => {
           <NavLink to={item.to} key={item.id}>
             <div
               className="portfolio__items-item"
-              style={{ background: `url(${item.image})` }}
+              style={{ background: `url(${item.image}) center` }}
             >
               <p>{item.name}</p>
             </div>

@@ -3,7 +3,7 @@ export const portfolio = [
         id: 1,
         name: "Websterz",
         to: "/websterz",
-        image: "./images/portfolio/portfolio1.png",
+        image: "./images/portfolio/websterz.png",
     },
     {
         id: 2,

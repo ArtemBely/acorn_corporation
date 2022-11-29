@@ -94,8 +94,8 @@ const Websterz: FC = () => {
         </p>
         <p className="websterz__heading">Первые версии маскота</p>
         <p className="websterz__text">
-          Во время обсуждения скетчей с заказчиком, выбрали понравившиеся
-          образы:
+          Интегрировав в работу пожелания заказчика, были полученные первые
+          версии маскота:
         </p>
         <img
           className="websterz__version-img"
@@ -116,7 +116,7 @@ const Websterz: FC = () => {
           концепции маскота:
         </p>
         <img
-          className="websterz__robot-img"
+          className="websterz__robot2-img"
           src="https://img3.teletype.in/files/eb/72/eb727c25-0350-4d50-9e93-f92faf27e801.png"
           alt="comments"
         />
@@ -153,7 +153,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__color-img"
-          src="https://img3.teletype.in/files/6b/84/6b847f0a-005d-4638-a3a8-88344369341b.png"
+          src="https://img3.teletype.in/files/ac/3b/ac3b3166-ea62-40ee-ae58-3639977ab90f.png"
           alt="comments"
         />
         <p className="websterz__text" style={{ marginTop: 15 }}>
@@ -181,7 +181,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__form-img"
-          src="https://img1.teletype.in/files/06/31/063177af-3b8e-43c3-af1e-d06a95ca7c25.png"
+          src="https://img2.teletype.in/files/16/b8/16b85a17-72b3-46cf-8142-1a5ec916f497.png"
           alt="comments"
         />
         <p className="websterz__heading">Итоговая версия лого</p>
@@ -193,11 +193,17 @@ const Websterz: FC = () => {
           src="https://img2.teletype.in/files/98/48/98488d95-dd25-4064-aca8-bacf1c2b357f.png"
           alt="comments"
         />
-         <img
+        <img
+          style={{ marginTop: 15 }}
           className="websterz__itog2-img"
           src="https://img2.teletype.in/files/9a/85/9a85685d-b79e-49c4-a673-2e4088270a9f.png"
           alt="comments"
         />
+
+        <p className="websterz__acorn">
+          Над проектом работала команда Acorn. Если ваш проект нуждается в
+          ребрендинге или вы хотите разработать сайт, напишите нам.
+        </p>
       </div>
     </div>
   );
