@@ -4,6 +4,7 @@ import Main from "./Main";
 import Privacy from "./pages/privacy/Privacy";
 import Login from "./pages/login/Login";
 import DiscussProject from "./pages/discussProject/DiscussProject";
+import Websterz from "./pages/portfolio/portfolioItems/Websterz";
 
 const routes: Array<Object> = [
   {
@@ -15,6 +16,11 @@ const routes: Array<Object> = [
     path: "/portfolio",
     exact: true,
     component: Portfolio,
+  },
+  {
+    path: "/websterz",
+    exact: true,
+    component: Websterz,
   },
   {
     path: "/about",

@@ -19,6 +19,9 @@ import Routes from "../components/routes";
 
 import portfolio from "./routers/portfolio";
 import about from "./routers/about";
+import discuss from "./routers/discuss";
+import privacy from "./routers/privacy";
+import websterz from "./routers/websterz";
 
 const app: Application = express();
 const CONNECTION_URI: any = process.env.MONGODB_URI;
@@ -70,7 +73,10 @@ app.use(passport.session());
 
 // pages
 app.use("/portfolio", portfolio);
+app.use("/websterz", websterz);
 app.use("/about", about);
+app.use("/privacy", privacy);
+app.use("/discuss", discuss);
 
 app.get("*", (req: Request, res: Response, next: NextFunction) => {
   const activeRouter: any =
