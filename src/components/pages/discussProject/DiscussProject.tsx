@@ -88,6 +88,7 @@ const DiscussProject: FC = () => {
               <div
                 className="discuss__wrapper_checkbox-block"
                 onClick={changeDate}
+                style={{ marginBottom: 30 }}
               >
                 <input
                   type="checkbox"

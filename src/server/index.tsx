@@ -14,7 +14,6 @@ import passport from "passport";
 import flash from "connect-flash";
 
 import Error from "../interfaces/Error";
-import { App } from "../components/App";
 import Routes from "../components/routes";
 
 import portfolio from "./routers/portfolio";
@@ -22,6 +21,7 @@ import about from "./routers/about";
 import discuss from "./routers/discuss";
 import privacy from "./routers/privacy";
 import websterz from "./routers/websterz";
+import { App } from "../components/App";
 
 const app: Application = express();
 const CONNECTION_URI: any = process.env.MONGODB_URI;

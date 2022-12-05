@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
-import "../../../../../public/styles/portfolioItems.css";
-
 import Close from "../../../ui/close/Close";
 import Heading from "../../../ui/heading/Heading";
+
+import "../../../../../public/styles/portfolioItems.css";
 
 const Websterz: FC = () => {
   return (

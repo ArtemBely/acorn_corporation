@@ -7,25 +7,25 @@ input {
   margin: 0;
 }
 body {
-  font-family: 'Inter-Regular';
+  font-family: "Inter-Regular";
 }
 @font-face {
-	font-family: 'Inter-Regular';
-	src: url('../../fonts/Inter-Regular.eot');
-	src: url('../../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
-	url('../../fonts/Inter-Regular.woff') format('woff'),
-	url('../../fonts/Inter-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Inter-Regular";
+  src: url("../../fonts/Inter-Regular.eot");
+  src: url("../../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/Inter-Regular.woff") format("woff"),
+    url("../../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'Inter-Bold';
-	src: url('../../fonts/Inter-Bold.eot');
-	src: url('../../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../../fonts/Inter-Bold.woff') format('woff'),
-	url('../../fonts/Inter-Bold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Inter-Bold";
+  src: url("../../fonts/Inter-Bold.eot");
+  src: url("../../fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/Inter-Bold.woff") format("woff"),
+    url("../../fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 a {
   text-decoration: none;
@@ -59,20 +59,29 @@ a {
   font-size: 16px;
 }
 
+.open {
+  display: flex !important;
+  translate: none !important;
+  width: auto !important;
+}
+
+.block {
+}
+
 .container {
   display: flex;
 }
 
 .main {
-  background-image: url("../images/main_image.png");
+  background-image: url("../images/main_image.jpg");
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
 }
 
-.menu {
-  padding: 40px 30px;
+.wrapper__menu {
   width: 470px;
+  padding: 40px 30px 19px 30px;
 }
 
 .menu__header {
@@ -81,20 +90,20 @@ a {
 }
 
 .menu__text {
-  margin-top: 80px;
-  margin-bottom: 35px;
+  margin-top: 60px;
+  margin-bottom: 25px;
 }
 
 .menu__text-caption {
   font-weight: 900;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .menu__text-title {
   font-weight: 700;
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .menu__text-subtitle {
@@ -105,7 +114,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 420px;
 }
 .menu__links-link {
@@ -454,4 +463,211 @@ a {
   color: var(--selected-date-color);
   background-color: var(--theme-color);
   box-shadow: var(--shadow);
+}
+
+@media (max-width: 696px) {
+  .container {
+    overflow: hidden;
+    width: 1385px;
+    translate: -50%;
+  }
+
+  .main {
+    background: none;
+  }
+
+  .menu {
+    width: max-content;
+  }
+
+  .menu__header {
+    width: 615px;
+  }
+
+  .menu__text {
+    width: 320px;
+  }
+
+  .menu__links {
+    width: 625px;
+  }
+
+  .menu__links-link {
+    width: 307px;
+  }
+}
+
+@media (max-width: 680px) {
+  .menu__header {
+    width: 580px;
+  }
+
+  .menu__links {
+    width: 580px;
+  }
+
+  .menu__links-link {
+    width: 285px;
+  }
+}
+
+@media (max-width: 656px) {
+  .menu__header {
+    width: 500px;
+  }
+
+  .menu__links {
+    width: 500px;
+  }
+
+  .menu__links-link {
+    width: 245px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu__header {
+    width: 420px;
+  }
+
+  .menu__links {
+    width: 420px;
+  }
+
+  .menu__links-link {
+    width: 205px;
+  }
+}
+
+@media (max-width: 492px) {
+  .menu__header {
+    width: 400px;
+  }
+
+  .menu__links {
+    width: 400px;
+  }
+
+  .menu__links-link {
+    width: 194px;
+  }
+}
+
+@media (max-width: 472px) {
+  .menu__header {
+    width: 380px;
+  }
+
+  .menu__links {
+    width: 380px;
+  }
+
+  .menu__links-link {
+    width: 184px;
+  }
+}
+
+@media (max-width: 456px) {
+  .menu__header {
+    width: 360px;
+  }
+
+  .menu__links {
+    width: 360px;
+  }
+
+  .menu__links-link {
+    width: 174px;
+  }
+}
+
+@media (max-width: 438px) {
+  .menu__header {
+    width: 340px;
+  }
+
+  .menu__links {
+    width: 340px;
+  }
+
+  .menu__text {
+    width: 340px;
+  }
+
+  .menu__links-link {
+    width: 164px;
+  }
+}
+
+@media (max-width: 418px) {
+  .menu__header {
+    width: 350px;
+  }
+
+  .menu__links {
+    width: 350px;
+  }
+
+  .menu__text {
+    width: 350px;
+  }
+
+  .menu__links-link {
+    width: 170px;
+  }
+  .menu__links-link-block p {
+    font-size: 16px;
+  }
+
+  .menu__text-subtitle {
+    font-size: 16px;
+  }
+
+  .menu__text-caption {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 398px) {
+  .menu__header {
+    width: 315px;
+  }
+
+  .menu__links {
+    width: 315px;
+  }
+
+  .menu__text {
+    width: 315px;
+  }
+
+  .menu__links-link {
+    width: 152px;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu__header {
+    width: 300px;
+  }
+
+  .menu__links {
+    width: 300px;
+  }
+
+  .menu__text {
+    width: 300px;
+  }
+
+  .menu__links-link {
+    width: 144px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    overflow: hidden;
+    width: 1003px;
+    translate: -65%;
+  }
 }

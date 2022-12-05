@@ -11,13 +11,15 @@ const Menu: FC = () => {
     typeof window != "undefined" ? localStorage.getItem("i18nextLng") : "En"
   );
 
-  let location = useLocation();
+  const location = useLocation();
+
   const { t, i18n } = useTranslation();
 
   const changeLanguage = () => {
     setLang(lang === "Ru" ? "En" : "Ru");
     i18n.changeLanguage(lang === "Ru" ? "En" : "Ru");
   };
+
   return (
     <div className="menu">
       <div className="menu__header">

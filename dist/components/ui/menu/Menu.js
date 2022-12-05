@@ -6,7 +6,7 @@ import { links } from "./data";
 const Menu = () => {
     // текущий язык сайта + манипуляции с ним
     const [lang, setLang] = useState(typeof window != "undefined" ? localStorage.getItem("i18nextLng") : "En");
-    let location = useLocation();
+    const location = useLocation();
     const { t, i18n } = useTranslation();
     const changeLanguage = () => {
         setLang(lang === "Ru" ? "En" : "Ru");

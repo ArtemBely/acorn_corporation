@@ -6,7 +6,7 @@ import "../../../../public/images/close.svg";
 const Close: FC = () => {
   return (
     <NavLink to="/">
-      <img style={{ cursor: "pointer" }} src="./images/close.svg" alt="close" />
+      <img style={{ cursor: "pointer" }} src="./images/close.png" alt="close" />
     </NavLink>
   );
 };

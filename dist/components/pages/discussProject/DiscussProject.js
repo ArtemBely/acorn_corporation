@@ -60,7 +60,7 @@ const DiscussProject = () => {
                     React.createElement("div", { className: "discuss__wrapper_checkbox-block", onClick: changeDate },
                         React.createElement("input", { type: "checkbox", className: "discuss__wrapper-checkbox", checked: date === "fast" }),
                         React.createElement("p", null, "\u0421\u0432\u044F\u0436\u0438\u0442\u0435\u0441\u044C \u0441\u043E \u043C\u043D\u043E\u0439 \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0441\u043A\u043E\u0440\u0435\u0435")),
-                    React.createElement("div", { className: "discuss__wrapper_checkbox-block", onClick: changeDate },
+                    React.createElement("div", { className: "discuss__wrapper_checkbox-block", onClick: changeDate, style: { marginBottom: 30 } },
                         React.createElement("input", { type: "checkbox", className: "discuss__wrapper-checkbox", checked: date === "date" }),
                         React.createElement("p", null, "\u042F \u0445\u043E\u0447\u0443 \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0430\u0442\u0443 \u0432\u0441\u0442\u0440\u0435\u0447\u0438")),
                     React.createElement("div", { className: "discuss__wrapper_input" },
