@@ -44,7 +44,6 @@ a {
 }
 
 .buttonDiscuss {
-  background: linear-gradient(232.67deg, #d0ccff -10.38%, #c4e2ff 107.61%);
   color: #3a7fe6;
   font-weight: 500;
   border-radius: 8px;
@@ -465,11 +464,72 @@ a {
   box-shadow: var(--shadow);
 }
 
+.discussYourProject {
+  background: #3a7fe5;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.discussYourProject__wrapper {
+  padding: 50px 30px;
+}
+
+.discussYourProject__wrapper-image {
+  background-image: url("../images/discuss/discuss-img.png");
+  background-position: left;
+  width: -webkit-fill-available;
+  border-radius: 8px;
+}
+
+.discussYourProject__wrapper-button {
+  width: 470px;
+}
+
+.discussYourProject__wrapper-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1290px) {
+  .discussYourProject__wrapper-image {
+    background-size: 320%;
+  }
+}
+
+@media (max-width: 992px) {
+  .discussYourProject__wrapper-image {
+    display: none;
+  }
+
+  .discussYourProject__wrapper-button {
+    width: 392px;
+  }
+
+  .discussYourProject__wrapper-title {
+    font-size: 40px;
+  }
+
+  .discussYourProject__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 @media (max-width: 696px) {
   .container {
     overflow: hidden;
     width: 1385px;
     translate: -50%;
+  }
+
+  .discussYourProject__wrapper-image {
+    display: block;
   }
 
   .main {
@@ -494,6 +554,10 @@ a {
 
   .menu__links-link {
     width: 307px;
+  }
+
+  .discussYourProject__wrapper {
+    text-align: unset;
   }
 }
 
@@ -669,5 +733,15 @@ a {
     overflow: hidden;
     width: 1003px;
     translate: -65%;
+  }
+
+  .discussYourProject__wrapper-image {
+    display: none;
+  }
+  .discussYourProject__wrapper {
+    text-align: center;
+  }
+  .discussYourProject__wrapper-button {
+    width: 260px;
   }
 }

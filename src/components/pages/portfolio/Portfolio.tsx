@@ -7,6 +7,7 @@ import Close from "../../ui/close/Close";
 import { portfolio } from "./data";
 
 import "../../../../public/styles/portfolio.css";
+import DiscussYourProject from "../../ui/discussYourProject/DiscussYourProject";
 
 const Portfolio: FC = () => {
   return (
@@ -27,6 +28,7 @@ const Portfolio: FC = () => {
           </NavLink>
         ))}
       </div>
+      <DiscussYourProject />
     </div>
   );
 };

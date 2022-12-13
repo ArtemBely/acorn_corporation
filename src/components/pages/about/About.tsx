@@ -3,9 +3,8 @@ import React, { FC } from "react";
 import Heading from "../../ui/heading/Heading";
 import Close from "../../ui/close/Close";
 
-import { employees } from "./data";
-
 import "../../../../public/styles/about.css";
+import DiscussYourProject from "../../ui/discussYourProject/DiscussYourProject";
 
 const About: FC = () => {
   return (
@@ -15,144 +14,166 @@ const About: FC = () => {
         <Close />
       </div>
 
-      {/* expertise */}
-      <div className="about__expertise">
-        <div className="about__expertise-text">
-          <p className="about-title">
-            Expertise in Marketing Technologies in Branding and Visual
-            Communications development
-          </p>
-          <p className="about-subtitle">
-            Amet minim mollit non deserunt ullamco est s it aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p>
-        </div>
-        <div className="about__expertise-image">
-          <img src="./images/about/expertise.png" alt="expertise_image" />
-        </div>
-      </div>
-
-      {/* solutions */}
-      <div className="about__solutions">
-        <div className="about__solutions-text">
-          <p className="about-title">
-            Expertise in Marketing Technologies in Branding and Visual
-            Communications development
-          </p>
-          <p className="about-subtitle">
-            Amet minim mollit non deserunt ullamco est s it aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p>
-        </div>
-      </div>
-
-      {/* we are the...  ** NEED FIX CLASSNAME */}
-      <div className="about__weAreThe">
-        <div className="about__weAreThe-text">
-          <p className="about-title">We are the most in..</p>
-          <p className="about-subtitle">
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco
-            est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. Exercitation veniam consequ
-          </p>
-        </div>
-      </div>
-
-      {/* team */}
-      <div className="about__team">
-        <p className="about-title">The Acorn's team</p>
-        <div className="about__team_cards">
-          {employees.map((employee) => (
-            <div className="about__team_cards-card" key={employee.id}>
-              <img src={employee.image} alt="profileImage" />
-              <p className="about__team_cards-card-name">{employee.name}</p>
-              <p className="about__team_cards-card-position">
-                {employee.position}
-              </p>
+      <div className="about__wrapper">
+        <div className="about__wrapper-img">
+          <div className="about__wrapper-img-content">
+            <div className="about__wrapper-img-content-card">
+              <p>Бренд</p>
+              <p>Контент</p>
             </div>
-          ))}
+            <div className="about__wrapper-img-content-card">
+              <p>Сайт</p>
+              <img src="./images/about/logo_about.svg" alt="logo" />
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* marTech */}
-      <div className="about__marTech">
-        <div className="about__about__marTech-text">
-          <p className="about-title">How MarTech Help Us Build Brands</p>
+        <div className="about__wrapper-art">
+          {/* блок Acorn */}
+          <p className="about-title">
+            Acorn: визуальные коммуникации для бизнес-событий и индустрии
+            развлечений
+          </p>
+          <p className="about-text">
+            Мы — веб-студия. Создаём бренды и веб-проекты с 2018 года
+            в Швейцарии, России и ОАЭ. Помогаем представителям публичных
+            мероприятий развивать визуальные коммуникации эвента, разрабатываем
+            лендинги и корпоративные сайты.
+          </p>
+          <p className="about-text">
+            Наша цель — развитие IT-направления эвент-индустрии, осуществление
+            понятного и лёгкого управления за реализацией мероприятия.
+            Для организаторов мероприятий мы хотим создать условия
+            для эффективного продвижения и продажи билетов на с помощью удобных
+            интернет-сервисов. Мы хотим стать лучшим партнёром для организаторов
+            мероприятий в сфере IT.
+          </p>
+          <p className="about-text">
+            К нам обращаются организаторы мероприятий, для подготовки проекта
+            к презентации инвестору на этапе MVP, а также при полноценном
+            запуске эвента. Также мы работаем с ежегодными мероприятиями —
+            поддерживаем сайт и развиваем фирменную айдентику. Мы наводим
+            порядок в визуальных коммуникациях заказчиков с клиентами,
+            систематизируем айдентику и визуальный язык бренда. Когда
+            у заказчика мало времени на дизайн и разработку сайта, предлагаем
+            решение по организации процесса.
+          </p>
+          <p className="about-text">
+            На сайтах, которые мы разрабатываем, присутствует удобная система
+            управления содержанием сайта для быстрой замены логотипов партнёров,
+            спикеров мероприятия, а также корректировки программы выступлений.
+          </p>
+          <p className="about-text">
+            При этом, при проектировании сайта мы не используем стандартных
+            решений — каждый проект уникален и выполняет конкретные задачи,
+            поставленные заказчиком.
+          </p>
+          <p className="about-text">
+            Например, у мероприятий компаний EmTech Association и Emtech
+            Investment Meeting, которые ежегодно проходят в Давосе (Швейцария)
+            мы были маркетинговым отделом на аутсорсе: разрабатывали логотипы
+            и фирменные стили, POS-материалы, пресс-вооллы, 3d-галлограммы
+            и промо-сайты. А для игрового клуба The Game создали логотип,
+            заложили основы фирменного стиля и разработали сайт, подкрепляющий
+            идеи бренда.
+          </p>
+          <p className="about-text">
+            Чтобы заказать у нас бренд или сайт свяжитесь с нами
+            через запланируйте совместную встречу или напишите нам.
+          </p>
+          {/* блок Стандарт. процесс */}
           <p className="about-subtitle">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-            duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-            amet.
-            <br />
-            <br />
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-            duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-            amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-            amet sint.
-            <br />
-            <br />
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco
-            est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet
-            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            <br />
-            <br />
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.
-            <br />
-            <br />
-            MarTech (Marketing Technologies) is a close combination of
-            marketing, technology and management. Of course, these “three
-            whales” in business have intersected before, but it is today that
-            technology has become so firmly established in life that it is they
-            who set the tone for the work of marketing, sales departments and a
-            new type of managerial thinking.
+            Стандартизированный процесс работы без шаблонных решений
+          </p>
+          <p className="about-text">
+            Проекта проходит по стандартизированным процессам. Во время
+            разработки используется Data Driven подход — перед началом работы
+            над проектом, команда маретологов, аналитиков и психологов изучает
+            рынок, потенциальную целевую аудиторию и паттерны её поведения,
+            собирает данные для формирования аналитического базиса разработки
+            продукта.
+          </p>
+          <p className="about-text">
+            На сайтах, которые мы разрабатываем, присутствует удобная система
+            управления сожержанием сайта для быстрой замены логотипов партнёров
+            и спикеров мероприятия, а также корректировки программы выступлений.
+          </p>
+          <p className="about-text">
+            При этом, мы не предлагаем клиентам стандартизированные решения —
+            вместо этого, подходим к каждому проекту индивидуально, выявляя пути
+            решения задач бизнеса.
+          </p>
+          {/* блок Технологии,  которые мы используем */}
+          <p className="about-subtitle">Технологии, которые мы используем</p>
+          <p className="about-text">
+            Стек — набор технологий, используемых для решения задачи.
+          </p>
+          <p className="about-text">
+            Создавая фулстек-веб-приложение, мы предусматриваем в нем клиентскую
+            часть, с которой будет взаимодействовать пользователь, и эта же
+            клиентская часть будет связана с сервером и базой данных – делая
+            весь этот процесс как можно более простым и управляемым.
+          </p>
+          <p className="about-text">
+            В основном, в проектах мы используем стек технологий MERN:
+          </p>
+          <p className="about-text">1. MongoDB — для создания базы данных;</p>
+          <p className="about-text">
+            MongoDB позволяет легко контролировать доступ к базе данных.
+            Экземпляры базы данных развернуты в уникальном виртуальном частном
+            облаке (VPC) для обеспечения сетевой изоляции. Другие функции
+            безопасности включают белый список IP-адресов или пиринг VPC,
+            постоянную аутентификацию, шифрование при хранении и шифровании при
+            передаче, сложное управление доступом на основе ролей, что
+            обеспечивает надежное хранение личных данных.
+          </p>
+          <p className="about-text">
+            2. ExpressJS — фреймворк web-приложений для Node.js,
+            спроектированный для создания веб-приложений и API;
+          </p>
+          <p className="about-text">
+            3. ReactJS — JavaScript-библиотека для создания клиентской части, с
+            которой будет взаимодействовать пользователь;
+          </p>
+          <p className="about-text">
+            4. NodeJS — для сервера, является средой выполнения JavaScript.
+          </p>
+          <p className="about-text">
+            5. TypeScript – фреймворк для типизации JavaScript, позволяющий
+            писать эффективный код и избегать ошибок на этапе разработки.
+          </p>
+          <p className="about-text">
+            6. Jest – инструмент технического тестирования проекта.
+          </p>
+          <p className="about-text">
+            7. Three.JS и WebGL – инструменты создания анимаций.
+          </p>
+          <p className="about-text">
+            В работе используем технику SSR (Server Side Rendering), что
+            практически предотвращает взлом сайта на любом уровне. Это самый
+            безопасный способ валидации, рендеринга и загрузки информации. Все
+            данные сначала поступают на сервер, тщательно валидируются проходя
+            проверку, а затем уходят к клиенту.
+          </p>
+          <p className="about-text">
+            Проект работает в кодировке UTF-8. Для технического обслуживания
+            проекта нужен FTP- и SSH-доступ.
+          </p>
+          <p className="about-text">
+            We are a cross-functional team with competencies Backend, Fronten,
+            Devops, QA, UI/UX and PM/PO. Our specialization is branding,
+            imposing landing, corporate web systems. We follow the principle of
+            incompetent deadlines, so we will launch your product in the set
+            dates.
+          </p>
+          <p className="about-text">
+            Создавая фулстек-веб-приложение, мы предусматриваем в нем клиентскую
+            часть, с которой будет взаимодействовать пользователь, и эта же
+            клиентская часть будет связана с сервером и базой данных – делая
+            весь этот процесс как можно более простым и управляемым
           </p>
         </div>
-        <div className="about__about__marTech-image">
-          <img src="./images/about/marTech.png" alt="marTechImage" />
-        </div>
       </div>
-
-      {/* methodologies */}
-      <div className="about__methodologies">
-        <div className="about__about__methodologies-text">
-          <p className="about-title">Corporate set of methodologies</p>
-          <p className="about-subtitle">
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco
-            est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. Exercitation veniam consequ
-          </p>
-        </div>
-      </div>
-
-      {/* reviews */}
-      <div className="about__reviews">
-        <p className="about-title">Customer reviews</p>
-      </div>
-
-      {/* partners */}
-      <div className="about__partners">
-        <p className="about-title">Partners</p>
-      </div>
-
-      {/* where are we */}
-      <div className="about__where">
-        <div className="about__about__where-text">
-          <p className="about-title">Where are we</p>
-          <p className="about-subtitle">We are Barnaulians</p>
-        </div>
-      </div>
+      <DiscussYourProject />
     </div>
   );
 };
