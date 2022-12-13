@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-//@ts-ignore
 import { App } from "../components/App";
 import { hydrate } from "react-dom";
-//var window:any;
+import "../i18n.js";
 hydrate(React.createElement(BrowserRouter, null,
-    React.createElement(App, { data: window.__INITIAL_DATA__ })), document.getElementById("app"));
+    React.createElement(Suspense, { fallback: React.createElement("div", null) },
+        React.createElement(App, null))), document.getElementById("app"));

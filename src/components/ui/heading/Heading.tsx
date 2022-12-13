@@ -1,7 +1,5 @@
 import React, { ReactNode } from "react";
 
-import "../../../../public/styles/main.css";
-
 export interface IHeadingProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLParagraphElement>,

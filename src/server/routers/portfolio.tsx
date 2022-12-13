@@ -1,19 +1,19 @@
 import React from "react";
-import express, { Request, Response } from 'express';
+import express, { Request, Response } from "express";
 import serialize from "serialize-javascript";
 import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
 
-import Portfolio from "../../pages/portfolio/Portfolio";
+import Portfolio from "../../components/pages/portfolio/Portfolio";
 
 const router = express.Router();
 
-router.get("/portfolio", (req:Request, res:Response) => {
+router.get("/portfolio", (req: Request, res: Response) => {
   let cond = true;
   const congrats = renderToString(
-      <StaticRouter>
-            <Portfolio />
-      </StaticRouter>
+    <StaticRouter>
+      <Portfolio />
+    </StaticRouter>
   );
 
   res.send(`<!DOCTYPE html>

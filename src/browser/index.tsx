@@ -1,12 +1,16 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-//@ts-ignore
+
 import { App } from "../components/App";
 import { hydrate } from "react-dom";
-//var window:any;
+
+import "../i18n.js";
+
 hydrate(
   <BrowserRouter>
-    <App data={(window as any).__INITIAL_DATA__} />
+    <Suspense fallback={<div></div>}>
+      <App />
+    </Suspense>
   </BrowserRouter>,
   document.getElementById("app")
 );

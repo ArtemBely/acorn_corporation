@@ -10,10 +10,13 @@ import validator from "express-validator";
 import session from "express-session";
 import passport from "passport";
 import flash from "connect-flash";
-import { App } from "../components/App";
 import Routes from "../components/routes";
 import portfolio from "./routers/portfolio";
 import about from "./routers/about";
+import discuss from "./routers/discuss";
+import privacy from "./routers/privacy";
+import websterz from "./routers/websterz";
+import { App } from "../components/App";
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
 //const port = process.env.PORT || 5000;
@@ -56,7 +59,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 // pages
 app.use("/portfolio", portfolio);
+app.use("/websterz", websterz);
 app.use("/about", about);
+app.use("/privacy", privacy);
+app.use("/discuss", discuss);
 app.get("*", (req, res, next) => {
     const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
     const promise = activeRouter.fetchInitialData

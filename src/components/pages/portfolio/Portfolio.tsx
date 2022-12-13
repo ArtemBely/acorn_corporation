@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 
-import Close from "../../components/ui/close/Close";
-import Heading from "../../components/ui/heading/Heading";
+import Heading from "../../ui/heading/Heading";
+import Close from "../../ui/close/Close";
 
 import { portfolio } from "./data";
 
-import "../../../public/styles/portfolio.css";
+import "../../../../public/styles/portfolio.css";
+import DiscussYourProject from "../../ui/discussYourProject/DiscussYourProject";
 
 const Portfolio: FC = () => {
   return (
@@ -20,13 +21,14 @@ const Portfolio: FC = () => {
           <NavLink to={item.to} key={item.id}>
             <div
               className="portfolio__items-item"
-              style={{ background: `url(${item.image})` }}
+              style={{ background: `url(${item.image}) center` }}
             >
               <p>{item.name}</p>
             </div>
           </NavLink>
         ))}
       </div>
+      <DiscussYourProject />
     </div>
   );
 };
