@@ -2,8 +2,11 @@ import React, { FC } from "react";
 
 import Close from "../../../ui/close/Close";
 import Heading from "../../../ui/heading/Heading";
+import DiscussYourProject from "../../../ui/discussYourProject/DiscussYourProject";
 
 import "../../../../../public/styles/portfolioItems.css";
+
+// import task from "../../../../../public/images/portfolio/websterz/4.jpg";
 
 const Websterz: FC = () => {
   return (
@@ -23,7 +26,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__logo-img"
-          src="https://img3.teletype.in/files/27/88/27888bbb-d6df-456a-bfcd-45552ea5be7d.png"
+          src="./images/portfolio/websterz/4.jpg"
           alt="websterz logo"
         />
         <p className="websterz__img-text">Игровой логотип команды Websterz</p>
@@ -59,7 +62,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__moodbord-img"
-          src="https://img2.teletype.in/files/10/36/10365191-d7d2-4208-867c-d6de2d7e2683.png"
+          src="./images/portfolio/websterz/2.jpg"
           alt="mooodbord"
         />
         <p className="websterz__img-text">Мудборд для Websterz</p>
@@ -86,7 +89,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__comment-img"
-          src="https://img1.teletype.in/files/4a/09/4a09f841-d20e-4d6d-b3f7-8d665cad5ccb.png"
+          src="./images/portfolio/websterz/3.jpg"
           alt="comments"
         />
         <p className="websterz__img-text">
@@ -99,13 +102,13 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__version-img"
-          src="https://img3.teletype.in/files/27/4e/274e3426-694a-4bba-ab8e-d933535782cd.png"
+          src="./images/portfolio/websterz/10.png"
           alt="comments"
         />
         <p className="websterz__img-text">Концепты техно-осы</p>
         <img
           className="websterz__robot-img"
-          src="https://img2.teletype.in/files/93/3d/933d3f2e-2466-4d46-ae69-ed919235f1a8.png"
+          src="./images/portfolio/websterz/6.jpg"
           alt="comments"
         />
         <p className="websterz__img-text">Оса-робот и её версии</p>
@@ -117,7 +120,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__robot2-img"
-          src="https://img3.teletype.in/files/eb/72/eb727c25-0350-4d50-9e93-f92faf27e801.png"
+          src="./images/portfolio/websterz/5.jpg"
           alt="comments"
         />
         <p className="websterz__img-text">
@@ -131,7 +134,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__gun-img"
-          src="https://img4.teletype.in/files/31/72/31725350-3f2f-4990-91a5-66b12b3f9cc5.png"
+          src="./images/portfolio/websterz/9.jpg"
           alt="comments"
         />
         <p className="websterz__img-text">Версии осы с оружием</p>
@@ -141,7 +144,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__horns-img"
-          src="https://img3.teletype.in/files/6b/84/6b847f0a-005d-4638-a3a8-88344369341b.png"
+          src="./images/portfolio/websterz/1.jpg"
           alt="comments"
         />
         <p className="websterz__img-text">
@@ -153,7 +156,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__color-img"
-          src="https://img3.teletype.in/files/ac/3b/ac3b3166-ea62-40ee-ae58-3639977ab90f.png"
+          src="./images/portfolio/websterz/11.png"
           alt="comments"
         />
         <p className="websterz__text" style={{ marginTop: 15 }}>
@@ -162,13 +165,13 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__colors-img"
-          src="https://img3.teletype.in/files/ab/03/ab03b55b-ec4b-482c-8b48-7561a2bf136c.png"
+          src="./images/portfolio/websterz/12.png"
           alt="comments"
         />
         <p className="websterz__heading">Финальная версия маскота</p>
         <img
           className="websterz__final-img"
-          src="https://img1.teletype.in/files/06/31/063177af-3b8e-43c3-af1e-d06a95ca7c25.png"
+          src="./images/portfolio/websterz/13.png"
           alt="comments"
         />
         <p className="websterz__text" style={{ marginTop: 15 }}>
@@ -181,7 +184,7 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__form-img"
-          src="https://img2.teletype.in/files/16/b8/16b85a17-72b3-46cf-8142-1a5ec916f497.png"
+          src="./images/portfolio/websterz/14.png"
           alt="comments"
         />
         <p className="websterz__heading">Итоговая версия лого</p>
@@ -190,13 +193,13 @@ const Websterz: FC = () => {
         </p>
         <img
           className="websterz__itog-img"
-          src="https://img2.teletype.in/files/98/48/98488d95-dd25-4064-aca8-bacf1c2b357f.png"
+          src="./images/portfolio/websterz/7.jpg"
           alt="comments"
         />
         <img
           style={{ marginTop: 15 }}
           className="websterz__itog2-img"
-          src="https://img2.teletype.in/files/9a/85/9a85685d-b79e-49c4-a673-2e4088270a9f.png"
+          src="./images/portfolio/websterz/8.jpg"
           alt="comments"
         />
 
@@ -205,6 +208,7 @@ const Websterz: FC = () => {
           ребрендинге или вы хотите разработать сайт, напишите нам.
         </p>
       </div>
+      <DiscussYourProject />
     </div>
   );
 };

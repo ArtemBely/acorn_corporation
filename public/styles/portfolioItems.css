@@ -11,11 +11,10 @@
 
 .websterz {
   margin-top: 40px;
-  width: 700px;
 }
 
 .websterz img {
-  width: 700px;
+  width: 100%;
 }
 
 .websterz__title {
@@ -34,10 +33,10 @@
   margin-bottom: 15px;
   font-size: 17px;
 }
-.websterz__logo-img {
+/* .websterz__logo-img {
   width: 700px;
-  height: 250px;
-}
+  height: 450px;
+} */
 
 .websterz__img-text {
   margin-top: 10px;
@@ -65,8 +64,8 @@
   margin-top: 10px;
 }
 
-.websterz__moodbord-img {
-  height: 393px;
+/* .websterz__moodbord-img {
+  height: 450px;
 }
 
 .websterz__comment-img {
@@ -119,7 +118,7 @@
 
 .websterz__itog2-img {
   height: 233px;
-}
+} */
 
 .websterz__acorn {
   font-size: 17px;
