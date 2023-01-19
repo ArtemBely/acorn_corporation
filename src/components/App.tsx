@@ -3,32 +3,13 @@ import { Route, Switch, useLocation } from "react-router-dom";
 
 import routes from "./routes";
 
-import Menu from "./ui/menu/Menu";
-
 import "../../public/styles/main.css";
+import Header from "./ui/header/Header";
 
 export const App: FC<any> = () => {
-  const location = useLocation();
-
-  // костыль, который нужно пофиксить (проблема с адаптивом меню)
-  useEffect(() => {
-    if (ref.current) {
-      if (location.pathname === "/") {
-        ref.current.className = "container open";
-      } else {
-        ref.current.className = "container block";
-      }
-    }
-  }, [location.pathname]);
-
-  const ref = useRef<HTMLDivElement>(null);
-
   return (
-    <div className="container" ref={ref}>
-      <div ref={ref} className="wrapper__menu">
-        <Menu />
-      </div>
-
+    <div className="container">
+      <Header />
       <Switch>
         {routes.map((route: any, i: number) => (
           <Route

@@ -1,5 +1,30 @@
 import React from "react";
 const Main = () => {
-    return React.createElement("div", { className: "main" });
+    return (React.createElement("div", { className: "main" },
+        React.createElement("div", { className: "visual_communication" },
+            React.createElement("div", { className: "visual_communication-info" },
+                React.createElement("p", { className: "visual_communication-info-title" },
+                    "Visual communications ",
+                    React.createElement("br", null),
+                    " for your business ",
+                    React.createElement("br", null),
+                    "without templates solutions"),
+                React.createElement("p", { className: "visual_communication-info-subtitle" },
+                    "We develop visual communications and web platforms ",
+                    React.createElement("br", null),
+                    " for corporate projects, business events, and the entertainment industry"),
+                React.createElement("button", { className: "visual_communication-info-button" }, "Let's discuss your project")),
+            React.createElement("div", { className: "visual_communication-img" },
+                React.createElement("img", { src: "./images/main/visual_mini.svg", alt: "visual_mini" }),
+                React.createElement("p", null, "What do the processes look like from the inside?"))),
+        React.createElement("div", { className: "sample-process" },
+            React.createElement("p", { className: "sample-process_title" }, "A sample process for working on a project"),
+            React.createElement("div", { className: "sample-process_subtitle" },
+                React.createElement("span", null),
+                React.createElement("p", null, "Participation of the client in the project")),
+            React.createElement("div", { className: "sample-process_visual" },
+                React.createElement("img", { src: "./images/main/visual_big.png", alt: "visual-big" }))),
+        React.createElement("div", { className: "projects" },
+            React.createElement("p", { className: "projects_title" }, "Projects"))));
 };
 export default Main;
