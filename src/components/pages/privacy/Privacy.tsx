@@ -696,7 +696,6 @@ const Privacy: FC = () => {
           </div>
         </div>
       </div>
-      <img src="./images/privacy/image.png" alt="privacy-background" />
     </div>
   );
 };

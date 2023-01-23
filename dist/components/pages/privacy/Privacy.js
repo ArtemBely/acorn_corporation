@@ -326,7 +326,6 @@ const Privacy = () => {
                             "14.3. \u0410\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F \u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0438 \u0432\u00A0\u0441\u0432\u043E\u0431\u043E\u0434\u043D\u043E\u043C \u0434\u043E\u0441\u0442\u0443\u043F\u0435 \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0430 \u0432\u00A0\u0441\u0435\u0442\u0438 \u0418\u043D\u0442\u0435\u0440\u043D\u0435\u0442 \u043F\u043E\u00A0\u0430\u0434\u0440\u0435\u0441\u0443",
                             " ",
                             React.createElement("a", { href: "https://acorn.ws/privacy", style: { color: "#8e8e8e" } }, "https://acorn.ws/privacy"),
-                            "."))))),
-        React.createElement("img", { src: "./images/privacy/image.png", alt: "privacy-background" })));
+                            ".")))))));
 };
 export default Privacy;

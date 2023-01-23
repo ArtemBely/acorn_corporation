@@ -62,10 +62,6 @@ const DiscussProject: FC = () => {
 
   return (
     <div className="discuss">
-      <div className="discuss__header">
-        <Heading>Discuss your project</Heading>
-        <Close />
-      </div>
       <div className="discuss__container">
         <div className="discuss__wrapper">
           {/* первый и главный компонент */}

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import DatePicker from "sassy-datepicker";
-import Heading from "../../ui/heading/Heading";
-import Close from "../../ui/close/Close";
 import InputDuscuss from "../../ui/input/inputDuscuss";
 import ButtonDiscuss from "../../ui/button/ButtonDiscuss";
 import Timer from "./Timer";
@@ -47,9 +45,6 @@ const DiscussProject = () => {
         setTimer(false);
     };
     return (React.createElement("div", { className: "discuss" },
-        React.createElement("div", { className: "discuss__header" },
-            React.createElement(Heading, null, "Discuss your project"),
-            React.createElement(Close, null)),
         React.createElement("div", { className: "discuss__container" },
             React.createElement("div", { className: "discuss__wrapper" },
                 confirm && (React.createElement(React.Fragment, null,

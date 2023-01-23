@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import DiscussYourProject from "./ui/discussYourProject/DiscussYourProject";
 const Main = () => {
@@ -16,7 +17,8 @@ const Main = () => {
                     "We develop visual communications and web platforms ",
                     React.createElement("br", null),
                     " for corporate projects, business events, and the entertainment industry"),
-                React.createElement("button", { className: "visual_communication-info-button" }, "Let's discuss your project")),
+                React.createElement(Link, { to: "/discuss" },
+                    React.createElement("button", { className: "visual_communication-info-button" }, "Let's discuss your project"))),
             React.createElement("div", { className: "visual_communication-img" },
                 React.createElement("img", { src: "./images/main/visual_mini.svg", alt: "visual_mini" }),
                 React.createElement("p", { onClick: () => setProcessScroll(!processScroll) }, "What do the processes look like from the inside?"))),

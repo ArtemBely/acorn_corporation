@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 const Footer: FC = () => {
   return (
@@ -6,7 +7,9 @@ const Footer: FC = () => {
       <div className="footer_container">
         <p>Acorn</p>
         <div className="footer_container-links">
-          <p className="footer_container-privacy">Privacy Policy</p>
+          <Link to="/privacy">
+            <p className="footer_container-privacy">Privacy Policy</p>{" "}
+          </Link>
           <p>© 2018-2023</p>
         </div>
       </div>

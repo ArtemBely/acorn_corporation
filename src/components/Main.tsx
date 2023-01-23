@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 import DiscussYourProject from "./ui/discussYourProject/DiscussYourProject";
@@ -19,9 +20,11 @@ const Main: FC = () => {
             We develop visual communications and web platforms <br /> for
             corporate projects, business events, and the entertainment industry
           </p>
-          <button className="visual_communication-info-button">
-            Let's discuss your project
-          </button>
+          <Link to="/discuss">
+            <button className="visual_communication-info-button">
+              Let's discuss your project
+            </button>
+          </Link>
         </div>
         <div className="visual_communication-img">
           <img src="./images/main/visual_mini.svg" alt="visual_mini" />

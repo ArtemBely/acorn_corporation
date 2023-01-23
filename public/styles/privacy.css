@@ -1,6 +1,9 @@
 .privacy {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  margin: 0px -30px;
 }
 
 .privacy__wrapper-header {
@@ -12,6 +15,8 @@
 .privacy__wrapper {
   padding: 40px 28px;
   width: 885px;
+  margin: 100px 0px;
+  background: #fff;
 }
 
 .privacy img {

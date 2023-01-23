@@ -1,10 +1,13 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 const Header: FC = () => {
   return (
     <div className="header">
       <div className="header_container">
-        <img src="./images/logo.svg" alt="logo" />
+        <Link to="/">
+          <img src="./images/logo.svg" alt="logo" />
+        </Link>
         <div className="navItems">
           <p>About</p>
           <p>Portfolio</p>
