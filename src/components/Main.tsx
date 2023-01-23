@@ -1,4 +1,6 @@
 import React, { FC, useState } from "react";
+import { CSSTransition } from "react-transition-group";
+
 import DiscussYourProject from "./ui/discussYourProject/DiscussYourProject";
 
 const Main: FC = () => {
@@ -29,7 +31,13 @@ const Main: FC = () => {
         </div>
       </div>
       {/* A sample process */}
-      {processScroll && (
+
+      <CSSTransition
+        in={processScroll}
+        timeout={300}
+        unmountOnExit
+        classNames="alert"
+      >
         <div className="sample-process">
           <p className="sample-process_title">
             A sample process for working on a project
@@ -42,7 +50,8 @@ const Main: FC = () => {
             <img src="./images/main/visual_big.png" alt="visual-big" />
           </div>
         </div>
-      )}
+      </CSSTransition>
+
       {/* projects */}
       <div className="projects">
         <p className="projects_title">Projects</p>

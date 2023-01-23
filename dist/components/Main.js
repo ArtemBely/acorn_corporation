@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 import DiscussYourProject from "./ui/discussYourProject/DiscussYourProject";
 const Main = () => {
     const [processScroll, setProcessScroll] = useState(false);
@@ -19,13 +20,14 @@ const Main = () => {
             React.createElement("div", { className: "visual_communication-img" },
                 React.createElement("img", { src: "./images/main/visual_mini.svg", alt: "visual_mini" }),
                 React.createElement("p", { onClick: () => setProcessScroll(!processScroll) }, "What do the processes look like from the inside?"))),
-        processScroll && (React.createElement("div", { className: "sample-process" },
-            React.createElement("p", { className: "sample-process_title" }, "A sample process for working on a project"),
-            React.createElement("div", { className: "sample-process_subtitle" },
-                React.createElement("span", null),
-                React.createElement("p", null, "Participation of the client in the project")),
-            React.createElement("div", { className: "sample-process_visual" },
-                React.createElement("img", { src: "./images/main/visual_big.png", alt: "visual-big" })))),
+        React.createElement(CSSTransition, { in: processScroll, timeout: 300, unmountOnExit: true, classNames: "alert" },
+            React.createElement("div", { className: "sample-process" },
+                React.createElement("p", { className: "sample-process_title" }, "A sample process for working on a project"),
+                React.createElement("div", { className: "sample-process_subtitle" },
+                    React.createElement("span", null),
+                    React.createElement("p", null, "Participation of the client in the project")),
+                React.createElement("div", { className: "sample-process_visual" },
+                    React.createElement("img", { src: "./images/main/visual_big.png", alt: "visual-big" })))),
         React.createElement("div", { className: "projects" },
             React.createElement("p", { className: "projects_title" }, "Projects"),
             React.createElement("div", { className: "projects_items" },
