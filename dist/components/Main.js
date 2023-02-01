@@ -48,7 +48,8 @@ const Main = () => {
                         React.createElement("p", null, "Our goal"),
                         React.createElement("p", null, "Who we work with"),
                         React.createElement("p", null, "OFeatures"))),
-                React.createElement(DiscussYourProject, null)),
+                React.createElement("div", { className: "discuss-desktop" },
+                    React.createElement(DiscussYourProject, null))),
             React.createElement("div", { className: "services" },
                 React.createElement("div", { className: "services_background" },
                     React.createElement("div", { className: "services-wrapper" },
@@ -61,6 +62,8 @@ const Main = () => {
                             React.createElement("div", { className: "services_items-item" },
                                 React.createElement("p", null, "Interactive web-movie")),
                             React.createElement("div", { className: "services_items-item" },
-                                React.createElement("p", null, "Site created using neural networks")))))))));
+                                React.createElement("p", null, "Site created using neural networks")))))),
+            React.createElement("div", { className: "discuss-mobile" },
+                React.createElement(DiscussYourProject, null)))));
 };
 export default Main;

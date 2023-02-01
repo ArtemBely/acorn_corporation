@@ -34,7 +34,6 @@ const Main: FC = () => {
         </div>
       </div>
       {/* A sample process */}
-
       <CSSTransition
         in={processScroll}
         timeout={300}
@@ -86,7 +85,9 @@ const Main: FC = () => {
               <p>OFeatures</p>
             </div>
           </div>
-          <DiscussYourProject />
+          <div className="discuss-desktop">
+            <DiscussYourProject />
+          </div>
         </div>
         <div className="services">
           <div className="services_background">
@@ -108,6 +109,9 @@ const Main: FC = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="discuss-mobile">
+          <DiscussYourProject />
         </div>
       </div>
     </div>
